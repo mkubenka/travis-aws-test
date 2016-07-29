@@ -1,0 +1,23 @@
+galaxy_info:
+  author: Michal Kubenka
+  description: Example role with Test Kitchen setup.
+
+  license: MIT
+
+  min_ansible_version: 2.0
+
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Amazon
+      versions:
+        - all
+
+  galaxy_tags:
+    - inspec
+    - kitchen
+    - test
+
+dependencies: []

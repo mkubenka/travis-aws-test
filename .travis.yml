@@ -1,0 +1,19 @@
+---
+
+sudo: required
+services: docker
+
+install:
+  - bundle install --jobs=3 --retry=3 --without='vagrant'
+
+env:
+  matrix:
+    - INSTANCE=default-centos-6
+    - INSTANCE=default-centos-7
+
+before_script:
+  # https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142230889
+  - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
+
+script:
+  - KITCHEN_LOCAL_YAML=.kitchen.ci.yml kitchen test ${INSTANCE}
