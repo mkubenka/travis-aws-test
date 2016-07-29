@@ -8,7 +8,3 @@
 - name: start and enable the ntp service
   service: name=ntpd state=started enabled=true
 
-- shell: ls -liaF /tmp/kitchen
-  register: docas
-
-- debug: var=docas

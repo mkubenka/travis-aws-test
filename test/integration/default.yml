@@ -15,6 +15,12 @@
         name="{{ ansible_env.SUDO_USER }}"
         groups=""
 
+    - shell: ls -liaF /tmp/kitchen
+      register: docas
+
+    - debug: var=docas
+
+
   roles:
     - role: kitchen-example
 
