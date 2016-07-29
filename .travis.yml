@@ -15,6 +15,7 @@ env:
 before_script:
   # https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142230889
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
+  - curl http://packages.us-west-1.amazonaws.com/2016.03/updates/6dbf2c302059/x86_64/repodata/repomd.xml
 
 script:
   - KITCHEN_LOCAL_YAML=.kitchen.ci.yml kitchen test ${INSTANCE}
