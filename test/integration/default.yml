@@ -16,5 +16,5 @@
         groups=""
 
   roles:
-    - role: kitchen-example
+    - role: travis-aws-test
 
