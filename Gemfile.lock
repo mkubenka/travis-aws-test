@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/mkubenka/kitchen-ansible.git
+  revision: a7d5f948f39a7968397b920dea53b9ea6238fa62
+  branch: fix-role_name_target_path
+  specs:
+    kitchen-ansible (0.45.0)
+      net-ssh (~> 3.0)
+      test-kitchen (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -36,9 +45,6 @@ GEM
       train (>= 0.15.1, < 1.0)
     jmespath (1.3.1)
     json (1.8.3)
-    kitchen-ansible (0.45.0)
-      net-ssh (~> 3.0)
-      test-kitchen (~> 1.4)
     kitchen-docker (2.5.0)
       test-kitchen (>= 1.0.0)
     kitchen-ec2 (1.0.1)
@@ -127,7 +133,7 @@ PLATFORMS
 
 DEPENDENCIES
   inspec
-  kitchen-ansible
+  kitchen-ansible!
   kitchen-docker
   kitchen-ec2
   kitchen-inspec
