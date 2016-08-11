@@ -21,4 +21,4 @@ script:
   - KITCHEN_LOCAL_YAML=.kitchen.ci.yml kitchen test ${INSTANCE}
 
 notifications:
-    webhooks: http://requestb.in/1cb2h0r1
+    webhooks: http://requestb.in/13fajw61
